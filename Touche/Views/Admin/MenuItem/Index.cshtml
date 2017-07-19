@@ -24,6 +24,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Image)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
         <th></th>
     </tr>
 
@@ -41,6 +44,9 @@
         <td class="col-md-1">
             <img src='@Url.Content("~/Content/Images/"+@item.Image)' class="img-responsive" />
         </td>
+        <th>
+            @item.Category.Name
+        </th>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             <button data-id="@item.Id" data-controller="menuitem" class="delete-item btn btn-danger">Delete</button>

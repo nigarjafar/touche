@@ -15,10 +15,13 @@ namespace Touche.Models
         public string Description { get; set; }
         public int Price { get; set; }
         public string Image { get; set; }
+        public int Category_Id { get; set; }
+
+        [ForeignKey("Category_Id")]
         public virtual Category Category { get; set; }
 
 
-        [Key, ForeignKey("Category")]
-        public uint Category_id { get; set; }
+       
+      
     }
 }

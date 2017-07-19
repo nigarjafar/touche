@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Touche.Models;
+using System.Data.Entity;
 
 namespace Touche.Controllers.Admin
 {
@@ -20,7 +21,7 @@ namespace Touche.Controllers.Admin
         // GET: menuItem
         public ActionResult Index()
         {
-            var menuItems = _context.MenuItems;
+            var menuItems = _context.MenuItems.Include(m => m.Category).ToList();
             return View("~/Views/Admin/menuItem/Index.cshtml", menuItems);
         }
 
@@ -34,11 +35,13 @@ namespace Touche.Controllers.Admin
         public ActionResult Edit(int id)
         {
             var menuItem = _context.MenuItems.SingleOrDefault(c => c.Id == id);
+            ViewBag.Categories = _context.Categories.ToList();
             return View("~/Views/Admin/menuItem/Form.cshtml", menuItem);
         }
 
         public ActionResult Save(MenuItem menuItem, HttpPostedFileBase file)
         {
+
 
             if (file != null)
             {
@@ -57,6 +60,7 @@ namespace Touche.Controllers.Admin
                 menuItemInDb.Name = menuItem.Name;
                 menuItemInDb.Description = menuItem.Description;
                 menuItemInDb.Price = menuItem.Price;
+                menuItemInDb.Category_Id = menuItem.Category_Id;
 
                 if (menuItem.Image != null)
                     menuItemInDb.Image = menuItem.Image;
@@ -64,6 +68,7 @@ namespace Touche.Controllers.Admin
             }
 
             _context.SaveChanges();
+            
             return RedirectToAction("Index");
         }
 

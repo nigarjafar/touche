@@ -22,8 +22,10 @@ namespace Touche
 
             bundles.Add(new ScriptBundle("~/bundles/bootbox").Include(
                     "~/Scripts/bootbox.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/tinymce").Include(
-                    "~/Scripts/tinymce/tinymce.min.js"));
+                    "~/Scripts/tinymce/tinymce.min.js",
+                    "~/Scripts/tinymce/init.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.

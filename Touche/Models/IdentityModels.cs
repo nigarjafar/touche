@@ -25,6 +25,7 @@ namespace Touche.Models
         public DbSet<Chef> Chefs { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Slider> Slider { get; set; }
+        public DbSet<Restaurant> Restaurant { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -35,7 +36,7 @@ namespace Touche.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<MenuItem>()
-                .HasOptional<Category>(s => s.Category)
+                .HasRequired<Category>(s => s.Category)
                 .WithMany()
                 .WillCascadeOnDelete(true);
         }
@@ -43,5 +44,7 @@ namespace Touche.Models
         {
             return new ApplicationDbContext();
         }
+
+        
     }
 }

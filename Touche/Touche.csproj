@@ -217,6 +217,7 @@
     <Compile Include="Controllers\Admin\CategoryController.cs" />
     <Compile Include="Controllers\Admin\ChefController.cs" />
     <Compile Include="Controllers\Admin\MenuItemController.cs" />
+    <Compile Include="Controllers\Admin\RestaurantController.cs" />
     <Compile Include="Controllers\Admin\ReviewController.cs" />
     <Compile Include="Controllers\Admin\SliderController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -277,6 +278,26 @@
     <Compile Include="Migrations\201707181932128_name_to_image_slider.Designer.cs">
       <DependentUpon>201707181932128_name_to_image_slider.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707191625534_Restaurant.cs" />
+    <Compile Include="Migrations\201707191625534_Restaurant.Designer.cs">
+      <DependentUpon>201707191625534_Restaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707191932036_Delete-test.cs" />
+    <Compile Include="Migrations\201707191932036_Delete-test.Designer.cs">
+      <DependentUpon>201707191932036_Delete-test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707192002014_test.cs" />
+    <Compile Include="Migrations\201707192002014_test.Designer.cs">
+      <DependentUpon>201707192002014_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707192015041_test1.cs" />
+    <Compile Include="Migrations\201707192015041_test1.Designer.cs">
+      <DependentUpon>201707192015041_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707192019212_test11.cs" />
+    <Compile Include="Migrations\201707192019212_test11.Designer.cs">
+      <DependentUpon>201707192019212_test11.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -316,6 +337,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\tinymce\init.js" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
     <Content Include="Scripts\tinymce\license.txt" />
     <Content Include="Scripts\tinymce\plugins\advlist\plugin.js" />
@@ -506,6 +528,8 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
     <Content Include="Scripts\tinymce\langs\readme.md" />
+    <Content Include="Views\Admin\Restaurant\Index.cshtml" />
+    <Content Include="Views\Admin\Restaurant\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -557,6 +581,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707181932128_name_to_image_slider.resx">
       <DependentUpon>201707181932128_name_to_image_slider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707191625534_Restaurant.resx">
+      <DependentUpon>201707191625534_Restaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707191932036_Delete-test.resx">
+      <DependentUpon>201707191932036_Delete-test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707192002014_test.resx">
+      <DependentUpon>201707192002014_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707192015041_test1.resx">
+      <DependentUpon>201707192015041_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707192019212_test11.resx">
+      <DependentUpon>201707192019212_test11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

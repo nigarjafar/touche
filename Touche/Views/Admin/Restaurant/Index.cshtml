@@ -1,0 +1,49 @@
+﻿@model  Touche.Models.Restaurant
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Layout/DefaultLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th class="col-md-3">
+           @Html.DisplayNameFor(Model => Model.Image)
+        </th>
+        <th>
+           @Html.DisplayNameFor(Model => Model.About)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Model => Model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Model => Model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            <img class="col-md-3" src='@Url.Content("~/Content/Images/"+Model.Image)' class="img-responsive" />
+        </td>
+        <td>
+            @Html.Raw( Model.About)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(Model => Model.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit") 
+   
+        </td>
+    </tr>
+
+
+</table>

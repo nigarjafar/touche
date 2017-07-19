@@ -82,15 +82,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6 ">
-                    <div class="about-img"><img src="@Url.Content("~/Content/Images/about.jpg")" class="img-responsive" alt=""></div>
+                    <div class="about-img"><img src='@Url.Content("~/Content/Images/"+ViewBag.Restaurant.Image)' class="img-responsive" alt=""></div>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <div class="about-text">
                         <h2>Our Restaurant</h2>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                        <h3>Awarded Chefs</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+                        @Html.Raw(@ViewBag.Restaurant.About)
                     </div>
                 </div>
             </div>
@@ -207,7 +205,7 @@
     <!-- Call Reservation Section -->
     <div id="call-reservation" class="text-center">
         <div class="container">
-            <h2>Want to make a reservation? Call <strong>1-887-654-3210</strong></h2>
+            <h2>Want to make a reservation? Call <strong>@ViewBag.Restaurant.Phone</strong></h2>
         </div>
     </div>
     <!-- Contact Section -->
@@ -253,25 +251,19 @@
     </div>
     <div id="footer">
         <div class="container text-center">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h3>Address</h3>
                 <div class="contact-item">
-                    <p>4321 California St,</p>
-                    <p>San Francisco, CA 12345</p>
+                    <p>@ViewBag.Restaurant.Address</p>
+                   
                 </div>
             </div>
-            <div class="col-md-4">
-                <h3>Opening Hours</h3>
-                <div class="contact-item">
-                    <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
-                    <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
-                </div>
-            </div>
-            <div class="col-md-4">
+           
+            <div class="col-md-6">
                 <h3>Contact Info</h3>
                 <div class="contact-item">
-                    <p>Phone: +1 123 456 1234</p>
-                    <p>Email: info@company.com</p>
+                    <p>Phone:@ViewBag.Restaurant.Phone</p>
+                  
                 </div>
             </div>
         </div>

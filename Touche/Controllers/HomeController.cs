@@ -11,7 +11,7 @@ namespace Touche.Controllers
     public class HomeController : Controller
     {
         private ApplicationDbContext _context;
-        private object newEntityModel;
+   
 
         public HomeController()
         {
@@ -30,6 +30,7 @@ namespace Touche.Controllers
                                .ToList();
             ViewBag.Chefs = _context.Chefs;
             ViewBag.Slider = _context.Slider.Single(s => s.Id == 1);
+            ViewBag.Restaurant = _context.Restaurant.Single(s => s.Id == 1);
             return View();
         }
 
