@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Touche.Models.Review
+@{
     Layout = "";
 }
 <!DOCTYPE html>
@@ -62,7 +63,7 @@
     </nav>
     <!-- Header -->
     <header id="header">
-        <div class="intro" style="background:url('@Url.Content("~/Content/Images/intro-bg.jpg")')">
+        <div class="intro" style="background:url('@Url.Content("~/Content/Images/"+ViewBag.Slider.Image)')">
             <div class="overlay">
                 <div class="container">
                     <div class="row">
@@ -218,28 +219,35 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
             </div>
             <div class="col-md-10 col-md-offset-1">
-                <form name="sentMessage" id="contactForm" novalidate>
+               
+                @using (Html.BeginForm("AddReview", "Home", FormMethod.Post, new { id = "contactForm", name = "sentMessage" }))
+                {
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+       
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control",placeholder="Name",id="name", required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email",type="email",id="email",required="required" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", placeholder = "Message",rows=4,id="message", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                      
                         <p class="help-block text-danger"></p>
                     </div>
                     <div id="success"></div>
-                    <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
-                </form>
+                    <input type="submit" class="btn btn-custom btn-lg" value="Send Message">
+                }
             </div>
         </div>
     </div>

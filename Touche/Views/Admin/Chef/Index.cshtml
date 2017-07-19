@@ -18,7 +18,7 @@
         <th>
             @Html.DisplayNameFor(model => model.About)
         </th>
-        <th>
+        <th col-md-1>
             @Html.DisplayNameFor(model => model.Image)
         </th>
         <th></th>
@@ -32,13 +32,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.About)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
+        <td class="col-md-1">
+            <img src='@Url.Content("~/Content/Images/"+@item.Image)' class="img-responsive" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+           <button data-id="@item.Id" data-controller="chef" class="delete-item">Delete</button>
         </td>
     </tr>
 }

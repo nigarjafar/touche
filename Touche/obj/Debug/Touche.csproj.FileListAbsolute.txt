@@ -87,3 +87,17 @@ c:\users\nigar\documents\visual studio 2015\Projects\Touche\Touche\obj\Debug\Tou
 C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.ForeignKey.resources
 C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.AddedChefs.resources
 C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.Added_Image_Chefs.resources
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\bin\System.Net.Http.Formatting.dll
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\bin\System.Web.Http.dll
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\bin\System.Web.Http.WebHost.dll
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\bin\System.Net.Http.Formatting.xml
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\bin\System.Web.Http.xml
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\bin\System.Web.Http.WebHost.xml
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.AddDeleteOnCascase.resources
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.AddDeleteOnCascase_1.resources
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.Review.resources
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\bin\ObjectDumper.dll
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.add_required.resources
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.text_to_message_in_reviews.resources
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.Slider.resources
+C:\Users\nigar\Documents\Visual Studio 2015\Projects\Touche\Touche\obj\Debug\Touche.Migrations.name_to_image_slider.resources

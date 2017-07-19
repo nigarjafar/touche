@@ -1,0 +1,16 @@
+namespace Touche.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class AddDeleteOnCascase : DbMigration
+    {
+        public override void Up()
+        {
+        }
+        
+        public override void Down()
+        {
+        }
+    }
+}

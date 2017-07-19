@@ -24,28 +24,23 @@ namespace Touche.Controllers
         }
         public ActionResult Index()
         {
-
-
-            ViewBag.menuItems = _context.MenuItems.Include(m => m.Category).ToList();
+            ViewBag.MenuItems = _context.MenuItems.Include(m => m.Category).ToList();
             ViewBag.Categories = _context.Categories
                                .Include(c => c.MenuItems)
                                .ToList();
             ViewBag.Chefs = _context.Chefs;
+            ViewBag.Slider = _context.Slider.Single(s => s.Id == 1);
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult AddReview(Review review)
         {
-            ViewBag.Message = "Your application description page.";
+            if(!ModelState.IsValid)
+                return new HttpStatusCodeResult(400, "zəhmət olmasa, bütün xanaları doldurun"); // Bad Request
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            _context.Reviews.Add(review);
+            _context.SaveChanges();
+            return new HttpStatusCodeResult(200); 
         }
     }
 }

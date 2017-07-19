@@ -23,11 +23,22 @@ namespace Touche.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<Chef> Chefs { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Slider> Slider { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<MenuItem>()
+                .HasOptional<Category>(s => s.Category)
+                .WithMany()
+                .WillCascadeOnDelete(true);
+        }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
